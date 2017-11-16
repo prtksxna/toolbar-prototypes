@@ -15,12 +15,21 @@ function getTool ( tool ) {
 		tool.items !== undefined &&
 		tool.items.length > 0
 	) {
-		var $menu = $( '<li>' ).addClass( 'dropdown-container' );
-		$menu.append( $( '<span>' ).addClass( 'dropdown-selected' ).text( tool.items[ 0 ].title ) );
-		var $menuList = $( '<ul>' ).appendTo( $menu );
+		var $menu = $( '<li>' )
+			.on( 'click', openDropdown )
+			.addClass( 'dropdown-container' );
+		var $selected = $( '<span>' )
+			.addClass( 'dropdown-selected' )
+			.text( tool.items[ 0 ].title );
+
+		$menu.append( $selected );
+		var $menuList = $( '<ul>' )
+			.addClass( 'dropdown-menu' )
+			.appendTo( $menu );
 		tool.items.forEach( function ( subTool ) {
 			$menuList.append( getTool( subTool ) );
 		} );
+
 		return $menu;
 	}
 
@@ -42,3 +51,23 @@ function getTool ( tool ) {
 	}
 	return $tool;
 };
+
+function openDropdown( event ) {
+	var $tool = $( this );
+	var $dropdown = $tool.find( '.dropdown-menu' ).clone();
+
+	var top = $tool.position().top + $tool.outerHeight();
+	var left = $tool.position().left - 1;
+	var width = $tool.outerWidth();
+
+	var $menu = $( '<div>' )
+		.append( $dropdown )
+		.css( {
+			'top': top,
+			'left': left,
+			'width': width
+		} )
+		.addClass( 'dropdown-float' );
+
+	$( 'body' ).append( $menu );
+}
