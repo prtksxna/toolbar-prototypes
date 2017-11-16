@@ -68,9 +68,7 @@ function openDropdown( event ) {
 	var $dropdown = $tool.find( '.dropdown-menu' ).clone();
 
 	// Get positions
-	var top = $tool.position().top + $tool.outerHeight();
-	var left = $tool.position().left - 1;
-	var width = $tool.outerWidth();
+	var pos = getDropdownSize( $tool );
 
 	// Setup the menu and position it
 	$tool.data( 'open', true );
@@ -78,9 +76,9 @@ function openDropdown( event ) {
 		.data( 'tool', $tool )
 		.append( $dropdown )
 		.css( {
-			'top': top,
-			'left': left,
-			'width': width
+			'top': pos.top,
+			'left': pos.left,
+			'width': pos.width
 		} )
 		.addClass( 'dropdown-float' )
 		.on( 'click', function () {
