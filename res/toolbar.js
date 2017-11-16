@@ -53,25 +53,30 @@ function getTool ( tool ) {
 };
 
 function openDropdown( event ) {
+	// Remove all exisitng dropdowns
 	$( '.dropdown-float' ).remove();
 
 	var $tool = $( this );
-	if (
-		$tool.data( 'open' ) &&
-		$( '.dropdown-float' ).length > 0
-	) {
+	// If the tool is open, set it to closed
+	// since we just destroyed all menus
+	if ( $tool.data( 'open' ) ) {
 		$tool.data( 'open', false );
 		return;
 	}
-	$tool.data( 'open', true );
 
+
+	// We'll copy this over to the floating menu
 	var $dropdown = $tool.find( '.dropdown-menu' ).clone();
 
+	// Get positions
 	var top = $tool.position().top + $tool.outerHeight();
 	var left = $tool.position().left - 1;
 	var width = $tool.outerWidth();
 
+	// Setup the menu and position it
+	$tool.data( 'open', true );
 	var $menu = $( '<div>' )
+		.data( 'tool', $tool )
 		.append( $dropdown )
 		.css( {
 			'top': top,
@@ -80,6 +85,9 @@ function openDropdown( event ) {
 		} )
 		.addClass( 'dropdown-float' )
 		.on( 'click', function () {
+			// Reset the open state on the tool this belongs to
+			$( $( this ).data( 'tool' ) ).data( 'open', false );
+			// ...and get rid of the menu
 			$( this ).remove();
 		} );
 
