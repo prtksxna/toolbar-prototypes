@@ -64,7 +64,6 @@ function openDropdown( event ) {
 		return;
 	}
 
-
 	// We'll copy this over to the floating menu
 	var $dropdown = $tool.find( '.dropdown-menu' ).clone();
 
