@@ -53,7 +53,18 @@ function getTool ( tool ) {
 };
 
 function openDropdown( event ) {
+	$( '.dropdown-float' ).remove();
+
 	var $tool = $( this );
+	if (
+		$tool.data( 'open' ) &&
+		$( '.dropdown-float' ).length > 0
+	) {
+		$tool.data( 'open', false );
+		return;
+	}
+	$tool.data( 'open', true );
+
 	var $dropdown = $tool.find( '.dropdown-menu' ).clone();
 
 	var top = $tool.position().top + $tool.outerHeight();
@@ -67,7 +78,10 @@ function openDropdown( event ) {
 			'left': left,
 			'width': width
 		} )
-		.addClass( 'dropdown-float' );
+		.addClass( 'dropdown-float' )
+		.on( 'click', function () {
+			$( this ).remove();
+		} );
 
 	$( 'body' ).append( $menu );
 }
