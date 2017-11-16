@@ -43,8 +43,12 @@ function getTool ( tool ) {
 			.attr( 'src', iconUrl + tool.icon + '.svg' ) );
 	}
 	if ( tool.items ) {
-		$tool.addClass( 'dropdown-container' );
-		var $subTools = $( '<ul>' ).appendTo( $tool );
+		$tool
+			.on( 'click', openDropdown )
+			.addClass( 'dropdown-container' );
+		var $subTools = $( '<ul>' )
+			.addClass( 'dropdown-menu' )
+			.appendTo( $tool );
 		tool.items.forEach( function ( subTool ) {
 			$subTools.append( getTool( subTool ) );
 		} );
@@ -78,7 +82,7 @@ function openDropdown( event ) {
 		.css( {
 			'top': pos.top,
 			'left': pos.left,
-			'width': pos.width
+			'min-width': pos.width
 		} )
 		.addClass( 'dropdown-float' )
 		.on( 'click', function () {
