@@ -3,6 +3,13 @@ body {
 	color: #222;
 	font-family: sans-serif;
 	line-height: 1.6;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #36c;
 }
 
 h1 {
@@ -15,7 +22,89 @@ h1 {
 	border-bottom: 1px solid #a2a9b1;
 }
 
+#content {
+	margin: 30px;
+	margin-top: 60px;
+}
+
 div:focus {
 	border: none;
 	outline: none;
+}
+
+#toolbar {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	border-bottom: #ccc 1px solid;
+	box-shadow: 0 0 5px #ccc;
+	display: flex;
+	position: fixed;
+	top: 0;
+	background: #fff;
+}
+
+ul > li {
+	border-right: #ccc 1px solid;
+	padding: 10px;
+	display: flex;
+}
+
+ul > li > img {
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+ul > li:hover {
+	background-color: #eee;
+	cursor: pointer;
+}
+
+ul > li li {
+	display: none;
+}
+
+.dropdown-container:after {
+	content: ' ';
+	height: 30px;
+	width: 30px;
+	background-image: url( '/node_modules/oojs-ui/dist/themes/wikimediaui/images/indicators/arrow-down.png' );
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: auto 0;
+	opacity: 0.7;
+}
+
+.dropdown-container ul {
+	display: none;
+}
+
+.tool-icon {
+	opacity: 0.7;
+}
+
+.tool-title,
+.dropdown-selected {
+	color: #4b4b4b;
+	margin: auto 0;
+}
+
+
+@media (max-width: 720px), screen and (orientation: portrait) {
+
+#content {
+	margin-top: 100px;
+}
+
+.tool-title {
+	display: none;
+}
+
+.tool-icon {
+	width: 34px;
+	padding: 4px;
+}
+
 }

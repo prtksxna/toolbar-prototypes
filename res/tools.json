@@ -1,0 +1,46 @@
+[
+	{
+		"title": "Undo",
+		"icon": "arched-arrow-rtl"
+	},
+	{
+		"title": "Redo",
+		"icon": "arched-arrow-ltr"
+	},
+	{
+		"items": [
+			{ "title": "Paragraph" },
+			{ "title": "Heading" },
+			{ "title": "Sub-heading" },
+			{ "title": "Preformatted" }
+		]
+	},
+	{
+		"icon": "text-style",
+		"items": [
+			{ "title": "Bold", "icon": "bold-b" },
+			{ "title": "Italics", "icon": "italic-i" },
+			{ "title": "Clear styling", "icon": "clear" },
+			{ "title": "Subscript", "icon": "subscript-ltr", "extra": true },
+			{ "title": "Superscript", "icon": "superscript-ltr", "extra": true },
+			{ "title": "Strikethrough", "icon": "strikethrough-a", "extra": true },
+			{ "title": "Computer code", "icon": "code", "extra": true },
+			{ "title": "Underline", "icon": "underline-a", "extra": true },
+			{ "title": "Language", "icon": "language-ltr", "extra": true }
+		]
+	},
+	{
+		"icon": "link-ltr"
+	},
+	{
+		"icon": "citeArticle-ltr",
+		"title": "Cite"
+	},
+	{
+		"icon": "listBullet-ltr",
+		"items": [
+			{ "title": "Bullet list", "icon": "listBullet-ltr" },
+			{ "title": "Numbered list", "icon": "listNumbered-ltr" }
+		]
+	}
+]
