@@ -7,8 +7,8 @@ $.getJSON( { url: 'res/tools.json' } ).done( function ( tools ) {
 	} );
 
 	// Check paginator
-	if ( paginate ) {
-		paginate();
+	if ( window.paginate !== undefined ) {
+		window.paginate();
 	}
 } ) ;
 
