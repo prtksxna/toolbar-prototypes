@@ -10,6 +10,11 @@ $.getJSON( { url: 'res/tools.json' } ).done( function ( tools ) {
 	if ( window.paginate !== undefined ) {
 		window.paginate();
 	}
+
+	// Add a menu button if included
+	if ( window.addMenuButton !== undefined ) {
+		window.addMenuButton();
+	}
 } ) ;
 
 function getTool ( tool ) {

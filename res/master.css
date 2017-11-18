@@ -113,6 +113,21 @@ ul > li li {
 	display: none;
 }
 
+#toolbar li.menu {
+	margin-left: auto;
+	color: #fff;
+	border: none;
+	width: 45px;
+	background-color: #222;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image: url( '/node_modules/oojs-ui/dist/themes/wikimediaui/images/icons/menu-invert.png' );
+}
+
+#toolbar li.menu.open {
+	background-image: url( '/node_modules/oojs-ui/dist/themes/wikimediaui/images/icons/close-invert.png' );
+}
+
 @media (max-width: 720px), screen and (orientation: portrait) {
 
 #toolbar {
