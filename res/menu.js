@@ -1,6 +1,13 @@
 window.addMenuButton = function () {
+	var $toolbar = $( '#toolbar' );
 	var vw = $( window ).width();
-	var tw = 0;
+	var tw = $toolbar.width();
+
+	// Don't do anything if the toolbar fits
+	if ( tw <= vw ) return;
+
+
+	tw = 0;
 	var tools = $( '#toolbar > li:visible' );
 	var extra = [];
 	var $lastTool;
