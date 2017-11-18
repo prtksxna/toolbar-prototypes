@@ -33,18 +33,19 @@
 		]
 	},
 	{
-		"icon": "link-ltr"
-	},
-	{
-		"icon": "citeArticle-ltr",
-		"title": "Cite"
-	},
-	{
 		"icon": "listBullet-ltr",
 		"items": [
 			{ "title": "Bullet list", "icon": "listBullet-ltr" },
 			{ "title": "Numbered list", "icon": "listNumbered-ltr" }
 		]
+	},
+	{
+		"icon": "link-ltr",
+		"title": "Link"
+	},
+	{
+		"icon": "citeArticle-ltr",
+		"title": "Cite"
 	},
 	{
 		"title": "Character",
