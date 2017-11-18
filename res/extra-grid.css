@@ -1,0 +1,24 @@
+.extra {
+	position: fixed;
+	top: 62px;
+	right: 0;
+	width: 100%;
+	box-shadow: 0 5px 3px #ccc;
+	border-top: 1px solid #ccc;
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	background: #fff;
+}
+
+.extra li {
+	background: #fff;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: 20px 0;
+	list-style: none;
+	text-align: center;
+}
+
+.extra .tool-title {
+	display: block;
+}
