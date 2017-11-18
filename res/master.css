@@ -107,6 +107,9 @@ ul > li li {
 .dropdown-float li {
 	border: none;
 }
+.mobile-dropdown {
+	display: none;
+}
 
 @media (max-width: 720px), screen and (orientation: portrait) {
 

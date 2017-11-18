@@ -19,6 +19,7 @@
 	},
 	{
 		"icon": "text-style",
+		"usetoolbar": true,
 		"items": [
 			{ "title": "Bold", "icon": "bold-b" },
 			{ "title": "Italics", "icon": "italic-i" },

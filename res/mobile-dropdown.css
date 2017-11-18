@@ -1,0 +1,10 @@
+@media (max-width: 720px), screen and (orientation: portrait) {
+.mobile-dropdown {
+	display: inherit;
+}
+
+.desktop-expanded,
+.mobile-only {
+	display: none;
+}
+}

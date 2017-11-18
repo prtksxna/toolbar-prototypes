@@ -47,6 +47,9 @@ function getTool ( tool ) {
 	if ( tool.items ) {
 		$tool
 			.on( 'click', openDropdown )
+			.addClass( function () {
+				return this.usetoolbar ? 'mobile-dropdown' : '';
+			}.bind( tool ) )
 			.addClass( 'dropdown-container' );
 		var $subTools = $( '<ul>' )
 			.addClass( 'dropdown-menu' )
@@ -55,6 +58,20 @@ function getTool ( tool ) {
 			$subTools.append( getTool( subTool ) );
 		} );
 	}
+
+	if ( tool.items && tool.usetoolbar === true ) {
+		var $dropdown = $tool;
+		$tool = [];
+		tool.items.forEach( function ( subTool ) {
+			var t = getTool( subTool );
+			if ( t ) {
+				$tool.push( t.addClass( 'desktop-expanded' ) );
+			}
+		} );
+
+		$tool.push( $dropdown );
+	}
+
 	return $tool;
 };
 
