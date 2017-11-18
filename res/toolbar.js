@@ -8,6 +8,8 @@ $.getJSON( { url: 'res/tools.json' } ).done( function ( tools ) {
 } ) ;
 
 function getTool ( tool ) {
+	if ( tool.extra === true ) return;
+
 	// Check if its just a dropdown like text style
 	if (
 		tool.title === undefined &&
