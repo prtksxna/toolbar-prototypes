@@ -1,5 +1,5 @@
 @media (max-width: 720px), screen and (orientation: portrait) {
-.desktop-only {
+#toolbar > li > .tool-title {
 	display: none;
 }
 }
