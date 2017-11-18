@@ -57,6 +57,7 @@ ul > li > img {
 	float: left;
 }
 
+ul > li.open,
 ul > li:hover {
 	background-color: #eee;
 	cursor: pointer;

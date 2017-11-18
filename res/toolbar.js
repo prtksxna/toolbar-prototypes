@@ -65,8 +65,8 @@ function openDropdown( event ) {
 	var $tool = $( this );
 	// If the tool is open, set it to closed
 	// since we just destroyed all menus
-	if ( $tool.data( 'open' ) ) {
-		$tool.data( 'open', false );
+	if ( $tool.hasClass( 'open' ) ) {
+		$tool.removeClass( 'open' );
 		return;
 	}
 
@@ -77,7 +77,7 @@ function openDropdown( event ) {
 	var pos = getDropdownSize( $tool );
 
 	// Setup the menu and position it
-	$tool.data( 'open', true );
+	$tool.addClass( 'open' );
 	var $menu = $( '<div>' )
 		.data( 'tool', $tool )
 		.append( $dropdown )
@@ -89,7 +89,7 @@ function openDropdown( event ) {
 		.addClass( 'dropdown-float' )
 		.on( 'click', function () {
 			// Reset the open state on the tool this belongs to
-			$( $( this ).data( 'tool' ) ).data( 'open', false );
+			$( $( this ).data( 'tool' ) ).removeClass( 'open' );
 			// ...and get rid of the menu
 			$( this ).remove();
 		} );
