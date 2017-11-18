@@ -42,7 +42,9 @@ div:focus {
 	display: flex;
 	position: fixed;
 	top: 0;
+	left: 0;
 	background: #fff;
+	transition: left 1s;
 }
 
 ul > li {
@@ -112,6 +114,10 @@ ul > li li {
 }
 
 @media (max-width: 720px), screen and (orientation: portrait) {
+
+#toolbar {
+	width: auto;
+}
 
 #content {
 	margin-top: 100px;

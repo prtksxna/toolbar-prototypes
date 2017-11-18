@@ -1,0 +1,20 @@
+.paginator {
+	position: fixed;
+	top: 0;
+	right: 0;
+	background: #222;
+	color: #fff;
+	overflow: hidden;
+	width: 63px;
+	height: 63px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.paginator.more {
+	background-image: url( '/node_modules/oojs-ui/dist/themes/wikimediaui/images/indicators/arrow-rtl-invert.png' );
+}
+
+.paginator.less {
+	background-image: url( '/node_modules/oojs-ui/dist/themes/wikimediaui/images/indicators/arrow-ltr-invert.png' );
+}

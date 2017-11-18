@@ -23,7 +23,7 @@
 		"items": [
 			{ "title": "Bold", "icon": "bold-b" },
 			{ "title": "Italics", "icon": "italic-i" },
-			{ "title": "Clear styling", "icon": "clear" },
+			{ "title": "Clear", "icon": "clear" },
 			{ "title": "Subscript", "icon": "subscript-ltr", "extra": true },
 			{ "title": "Superscript", "icon": "superscript-ltr", "extra": true },
 			{ "title": "Strikethrough", "icon": "strikethrough-a", "extra": true },
@@ -45,5 +45,17 @@
 			{ "title": "Bullet list", "icon": "listBullet-ltr" },
 			{ "title": "Numbered list", "icon": "listNumbered-ltr" }
 		]
+	},
+	{
+		"title": "Character",
+		"icon": "specialCharacter"
+	},
+	{
+		"title": "Help",
+		"icon": "help-ltr"
+	},
+	{
+		"title": "Options",
+		"icon": "menu"
 	}
 ]

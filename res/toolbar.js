@@ -5,6 +5,11 @@ $.getJSON( { url: 'res/tools.json' } ).done( function ( tools ) {
 	tools.forEach( function ( tool ) {
 		$toolbar.append( getTool( tool ) );
 	} );
+
+	// Check paginator
+	if ( paginate ) {
+		paginate();
+	}
 } ) ;
 
 function getTool ( tool ) {
