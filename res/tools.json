@@ -1,11 +1,13 @@
 [
 	{
 		"title": "Undo",
-		"icon": "arched-arrow-rtl"
+		"icon": "arched-arrow-rtl",
+		"classes": "desktop-only"
 	},
 	{
 		"title": "Redo",
-		"icon": "arched-arrow-ltr"
+		"icon": "arched-arrow-ltr",
+		"classes": "desktop-only"
 	},
 	{
 		"items": [

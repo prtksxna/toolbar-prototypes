@@ -1,0 +1,6 @@
+@media (max-width: 720px), screen and (orientation: portrait) {
+.desktop-only {
+	display: none;
+}
+
+}

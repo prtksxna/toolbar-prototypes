@@ -33,7 +33,7 @@ function getTool ( tool ) {
 		return $menu;
 	}
 
-	var $tool = $( '<li>' );
+	var $tool = $( '<li>' ).addClass( tool.classes );
 	var iconUrl = 'node_modules/oojs-ui/dist/themes/wikimediaui/images/icons/';
 	$tool.append( $( '<span>' ).addClass( 'tool-title' ).text( tool.title ) );
 
