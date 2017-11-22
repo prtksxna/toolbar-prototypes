@@ -1,2 +1,2 @@
 # toolbar-prototypes
-Prototypes for the OOUI/VE toolbars
+Prototypes for the OOUI/VE toolbars.
