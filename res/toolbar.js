@@ -46,7 +46,7 @@ function getTool ( tool ) {
 	}
 
 	var $tool = $( '<li>' ).addClass( tool.classes );
-	var iconUrl = '/res/images/icons/';
+	var iconUrl = 'res/images/icons/';
 	$tool.append( $( '<span>' ).addClass( 'tool-title' ).text( tool.title ) );
 
 	if ( tool.icon !== undefined ) {

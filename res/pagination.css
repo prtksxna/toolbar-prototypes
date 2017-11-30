@@ -12,9 +12,9 @@
 }
 
 .paginator.more {
-	background-image: url( '/res/images/indicators/arrow-rtl-invert.png' );
+	background-image: url( 'images/indicators/arrow-rtl-invert.png' );
 }
 
 .paginator.less {
-	background-image: url( '/res/images/indicators/arrow-ltr-invert.png' );
+	background-image: url( 'images/indicators/arrow-ltr-invert.png' );
 }

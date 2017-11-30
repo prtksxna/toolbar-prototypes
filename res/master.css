@@ -73,7 +73,7 @@ ul > li li {
 	content: ' ';
 	height: 30px;
 	width: 30px;
-	background-image: url( '/res/images/indicators/arrow-down.png' );
+	background-image: url( 'images/indicators/arrow-down.png' );
 	background-repeat: no-repeat;
 	background-position: center center;
 	margin: auto 0;
@@ -121,11 +121,11 @@ ul > li li {
 	background-color: #222;
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-image: url( '/res/images/icons/menu-invert.png' );
+	background-image: url( 'images/icons/menu-invert.png' );
 }
 
 #toolbar li.menu.open {
-	background-image: url( '/res/images/icons/close-invert.png' );
+	background-image: url( 'images/icons/close-invert.png' );
 }
 
 @media (max-width: 720px), screen and (orientation: portrait) {
